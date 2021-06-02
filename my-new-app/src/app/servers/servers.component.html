@@ -1,2 +1,8 @@
-<p>servers works!</p>
+<!--<p>servers works!</p>-->
 
+<!--Property Binding-->
+<!--The disabled property is changed dynamically-->
+
+<button class="btn btn-primary center-block" [disabled]="!allowNewServer"> Add Server </button>
+
+<p [innerText]="allowNewServer"></p>
