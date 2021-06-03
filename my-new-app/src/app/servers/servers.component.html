@@ -1,8 +1,29 @@
 <!--<p>servers works!</p>-->
 
-<!--Property Binding-->
+<!--Property Binding & Event Binding-->
 <!--The disabled property is changed dynamically-->
-
-<button class="btn btn-primary center-block" [disabled]="!allowNewServer"> Add Server </button>
-
+<!--"()" used for event binding when user clicks on the button the fucntion assigned is invoked-->
+<!--<label>Server Name </label>-->
+<!--<input-->
+<!--  type="text"-->
+<!--  class="form-control"-->
+<!--  (input)="onUpdateServerName($event)"> -->
+<!-- "$event" is a special keyword provided for event binding-->
+<label>Server Name </label>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName"> <!--Two way Binding-->
+<!--<div>-->
+<!--  <p>{{serverName}}</p>-->
+<!--  </div>-->
+<hr>
+<button
+  class="btn btn-primary center-block"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<p *ngIf="serverStatus">Server was created with server name {{serverName}}</p>
+<hr>
 <p [innerText]="allowNewServer"></p>
+
+<app-server *ngFor="let s of servers"></app-server>

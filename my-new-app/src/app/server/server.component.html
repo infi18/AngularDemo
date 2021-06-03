@@ -1,9 +1,32 @@
 
 <!--Using String Interpolation-->
+<div class="col-xs-12">
+<!--<p-->
+<!--  [ngClass]="{online: serverStatus === 'online'}"-->
+<!--  [ngStyle]="{backgroundColor:getColor()}">-->
+<!--  The Server is {{ getServerStatus()}}-->
+<!--</p>-->
+<p
+  [ngClass]="{online: serverStatus === 'online'}"
+  [ngStyle]="{backgroundColor:getColor()}">
+  The Server with ID {{ serverID }} is {{ serverStatus }}
+</p>
+</div>
+<!--<p class="center-block"> The {{ 'Server' }} with ID {{ serverID }} is {{ serverStatus }} </p>-->
 
-<p> The Server with ID {{ serverID1 }} is {{ getServerStatus() }} </p>
 
-<p class="center-block"> The {{ 'Server' }} with ID {{ serverID }} is {{ serverStatus }} </p>
+<!--Demo all types of Data binding-->
+<!--<div class="col-xs-12">-->
+<!--<label>Username</label>-->
+<!--<input-->
+<!--  type ="text"-->
+<!--  class="form-control"-->
+<!--  [(ngModel)]="userName">-->
+<!--<p>{{userName}}</p>-->
 
+<!--the "===" is used to compare value and "=" to assign value-->
+<!--<button-->
+<!--class="btn btn-primary center-block"-->
+<!--[disabled]="userName === ''"-->
+<!--(click)="userName = ''">Reset Username</button>-->
 
-<!--<app-servers></app-servers>-->
